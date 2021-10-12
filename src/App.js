@@ -1,28 +1,34 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { useDispatch, useSelector } from 'react-redux';
 import Home from './components/Home';
 import Details from './components/Details';
+import { getCorona } from './redux/corona/corona';
+import { getWorld } from './redux/corona/world';
 
-const App = () => (
-  <Router>
-    <div>
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
+const App = () => {
+  const state = useSelector((state) => state.corona);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCorona());
+    dispatch(getWorld());
+  }, [dispatch]);
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      {state.map((corona) => (
+        <Route key={`${corona.country}#path`} path={`/${corona.country}`}>
+          <Details corona={corona} />
         </Route>
-        <Route path="/details">
-          <Details />
-        </Route>
-      </Switch>
-    </div>
-  </Router>
-);
+      ))}
+    </Switch>
+  );
+};
 
 export default App;

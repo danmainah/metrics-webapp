@@ -1,21 +1,27 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { getCorona } from '../redux/corona/corona';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const state = useSelector((state) => state.corona);
-  console.log(state);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCorona());
-  }, [dispatch]);
-
+  const world = useSelector((state) => state.world);
   return (
     <>
       <ul>
+        <h2>
+          Population with Covid per 1 million:
+          {world.activePerOneMillion}
+        </h2>
+        <h3>
+          Countries affected:
+          {world.affectedCountries}
+        </h3>
+      </ul>
+      <ul>
         {state.map((corona) => (
           <li key={corona.country}>
-            {corona.country}
+            <Link to={`/${corona.country}`}>
+              {corona.country}
+            </Link>
             {corona.todayRecovered}
           </li>
         ))}
