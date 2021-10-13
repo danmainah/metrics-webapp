@@ -5,12 +5,9 @@ import mapi from '../mapi.png';
 const Home = () => {
   const state = useSelector((state) => state.corona);
   const world = useSelector((state) => state.world);
-
-  console.log(state);
   const data = state.filter((value) => value.todayCases)
     .sort((a, b) => b.todayCases - a.todayCases)
     .splice(0, 10);
-  console.log(data);
   return (
     <>
       <div className="container-fluid">

@@ -11,7 +11,7 @@ export const getCorona = () => async (dispatch) => {
   });
 };
 
-const coronaReducer = (state = initialState, action) => {
+export const coronaReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case FETCH_DATA:
@@ -20,5 +20,3 @@ const coronaReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default coronaReducer;
