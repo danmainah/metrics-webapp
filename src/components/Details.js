@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Details = (corona) => {
   const {
-    country, todayCases, countryInfo, tests,
+    country, todayCases, countryInfo, tests, active, recovered,
   } = corona.corona;
   return (
     <>
@@ -18,25 +18,36 @@ const Details = (corona) => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title">
+              <h5 className="card-title text-secondary">
                 {' '}
                 {country}
                 {' '}
-                corona informatin
+                corona information
               </h5>
               <p className="card-text">
                 {' '}
-                Number of Cases registered today
+                Number of Cases registered today:
                 {' '}
                 {todayCases }
               </p>
               <p className="card-text">
-                <small className="text">
-                  Number of tests done
-                  {' '}
-                  {' '}
-                  {tests}
-                </small>
+                {' '}
+                Number of Active:
+                {' '}
+                { active }
+              </p>
+              <p className="card-text">
+                {' '}
+                Number of Tests done:
+                {' '}
+                { tests }
+              </p>
+              <p className="card-text">
+                {' '}
+                Number of Heealed:
+                {' '}
+                {recovered}
+                {' '}
               </p>
             </div>
           </div>

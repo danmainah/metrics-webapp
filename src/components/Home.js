@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import mapi from '../mapi.png';
 
 const Home = () => {
   const state = useSelector((state) => state.corona);
@@ -13,19 +14,21 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <div className="col">
-            <h2>Word Corona Statistics</h2>
-            <ul>
-              <h2>
-                Population with Covid per 1 million:
-                {world.activePerOneMillion}
-              </h2>
-              <h3>
-                Countries affected:
-                {world.affectedCountries}
-              </h3>
-            </ul>
+        <div className="card mb-3 border-0 ">
+          <div className="row g-0">
+            <div className="col-4">
+              <img src={mapi} className="img-fluid rounded-start w-100 clasi" alt="img" />
+            </div>
+            <div className="col-8">
+              <div className="card-body">
+                <h5 className="card-title text-center mt-3">Corona Daily Update</h5>
+                <p className="card-text text-center mt-3">
+                  Countries affected:
+                  {' '}
+                  {world.affectedCountries}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
