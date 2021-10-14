@@ -1,21 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const DetailsHeader = () => (
   <>
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar bgi">
       <div className="container-fluid">
-        <Link to="/">
+        <Link classname="text-reset">
           <i className="fa fa-angle-left m-1" />
-          {' '}
-          Go Back
+          <small>Go Back</small>
         </Link>
-
         <div className="nav justify-content-center">
-          <small>Countries view</small>
+          <small>Country view</small>
         </div>
         <div className="d-flex">
-          <i className="fa  fa-microphone m-1" />
-          <i className="fa fa-cog m-1" />
+          <i className="fa  fa-microphone me-3 " />
+          <i className="fa fa-cog " />
         </div>
       </div>
     </nav>
