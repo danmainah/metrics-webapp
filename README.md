@@ -6,6 +6,8 @@
 
 # Live demo
  to view this site visit `https://gifted-kepler-3add98.netlify.app/` 
+
+ 
 To get a local copy up and running follow these simple steps.
 
 - You can clone this repo by typing `git clone https://github.com/rpire/space-traveler-s-hub.git` on your terminal.

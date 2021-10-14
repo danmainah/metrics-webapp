@@ -44,7 +44,7 @@ const Details = (corona) => {
               </p>
               <p className="card-text">
                 {' '}
-                Number of Heealed:
+                Number of Healed:
                 {' '}
                 {recovered}
                 {' '}

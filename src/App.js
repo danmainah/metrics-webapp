@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import Home from './components/Home';
+import Home from './container/Home';
 import Details from './components/Details';
 import { getCorona } from './redux/corona/corona';
 import { getWorld } from './redux/corona/world';
