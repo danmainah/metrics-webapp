@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const DetailsHeader = () => (
   <>
     <nav className="navbar bgi">
       <div className="container-fluid">
-        <Link classname="text-reset">
+        <Link to="/">
           <i className="fa fa-angle-left m-1" />
-          <small>Go Back</small>
+          <small className="text-white">Go Back</small>
         </Link>
         <div className="nav justify-content-center">
           <small>Country view</small>

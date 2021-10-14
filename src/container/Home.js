@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import mapi from '../mapi.png';
 import Header from '../components/HomeHeader';
+import Card from '../components/HomeCard';
 
 const Home = () => {
   const state = useSelector((state) => state.corona);
@@ -33,26 +33,7 @@ const Home = () => {
 
         <div className="row">
           {data.map((corona) => (
-            <Link className="card col-6 col-lg-4 text-decoration-none text-white" to={`/${corona.country}`} key={corona.country}>
-
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img src={corona.countryInfo.flag} className="img-fluid rounded-start p-1 w-100" alt={corona.country} />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-
-                    {corona.country}
-
-                    <p className="card-text">
-                      Today corona cases:
-                      {corona.todayCases}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </Link>
+            <Card key={corona.country} corona={corona} />
           ))}
         </div>
       </div>
