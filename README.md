@@ -47,6 +47,8 @@ Feel free to check the [issues page](/issues).
 
 Give a ⭐️ if you like this project!
 
+Thanks to Nelson Sakwa of [Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29) for the amazing website design that this project is based on.
+
 # 📝 License
 
 This project is [MIT](LICENSE) licensed.
