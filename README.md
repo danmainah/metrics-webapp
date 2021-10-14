@@ -10,7 +10,7 @@
  
 To get a local copy up and running follow these simple steps.
 
-- You can clone this repo by typing `git clone https://github.com/rpire/space-traveler-s-hub.git` on your terminal.
+- You can clone this repo by typing `git clone https://github.com/danmainah/metrics-webapp.git` on your terminal.
 
 - Type `cd space-traveler-s-hub` to access the project on the terminal.
   
