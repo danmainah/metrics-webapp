@@ -1,4 +1,4 @@
-import worldReducer, {getWorld} from "../../redux/corona/world";
+import worldReducer, { getWorld } from '../../redux/corona/world';
 
 const data = [
   { id: 1, title: 'Task One', userId: 1 },

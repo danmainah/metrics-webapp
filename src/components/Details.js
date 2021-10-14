@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import DetailsHeader from './DetailsHeader';
 
 const Details = (corona) => {
   const {
@@ -6,12 +6,8 @@ const Details = (corona) => {
   } = corona.corona;
   return (
     <>
+      <DetailsHeader />
       <div className="card mb-3">
-        <Link to="/">
-          <i className="fa fa-arrow-left m-1" />
-          {' '}
-          Go Back
-        </Link>
         <div className="row g-0">
           <div className="col-md-4">
             <img src={countryInfo.flag} className="img-fluid rounded-start p-1 w-100" alt={country} />

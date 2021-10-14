@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import mapi from '../mapi.png';
+import Header from '../components/HomeHeader';
 
 const Home = () => {
   const state = useSelector((state) => state.corona);
@@ -10,6 +11,7 @@ const Home = () => {
     .splice(0, 10);
   return (
     <>
+      <Header />
       <div className="container-fluid">
         <div className="card mb-3 border-0 ">
           <div className="row g-0">

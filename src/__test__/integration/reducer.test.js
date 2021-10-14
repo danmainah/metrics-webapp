@@ -1,4 +1,5 @@
 import { getCorona, coronaReducer } from '../../redux/corona/corona';
+
 const data = [
   { id: 1, title: 'Task One', userId: 1 },
   { id: 2, title: 'Task Two', userId: 1 },
