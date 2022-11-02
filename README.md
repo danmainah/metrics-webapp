@@ -5,7 +5,7 @@
 > **Metrics-Webapp** is an API based website that displays two  pages. The `Home` page, where you can see, top 10 corona nations and a link to their respective data. And the `Details` page, where you can get more details on a coutry corona status.
 
 # Live demo
- to view this site visit `https://gifted-kepler-3add98.netlify.app/` 
+ to view this site visit [here](https://gifted-kepler-3add98.netlify.app/)
 
  
 To get a local copy up and running follow these simple steps.
